@@ -1,0 +1,60 @@
+# Kanagawa Lotus for delta. Include this file, then enable the feature:
+#
+#   [include]
+#       path = ~/.config/delta/kanagawa-lotus.gitconfig
+#   [delta]
+#       features = kanagawa-lotus
+#
+# Colors come from kanagawa-community/.github palette.json, mapped by role.
+# syntax-theme needs themes/bat/kanagawa-lotus.tmTheme installed in bat.
+
+[delta "kanagawa-lotus"]
+    light = true
+    syntax-theme = kanagawa-lotus
+    minus-style = syntax "#d9a594"
+    minus-non-emph-style = syntax "#d9a594"
+    minus-emph-style = "#f2ecbc" "#d7474b" bold
+    minus-empty-line-marker-style = normal "#d9a594"
+    plus-style = syntax "#b7d0ae"
+    plus-non-emph-style = syntax "#b7d0ae"
+    plus-emph-style = "#f2ecbc" "#6e915f" bold
+    plus-empty-line-marker-style = normal "#b7d0ae"
+    zero-style = syntax
+    map-styles = bold purple => syntax "#d7e3d8", bold blue => syntax "#d7e3d8", bold cyan => syntax "#d7e3d8", bold yellow => syntax "#d7e3d8"
+    whitespace-error-style = "#e82424" reverse
+    line-numbers = true
+    line-numbers-minus-style = "#d7474b"
+    line-numbers-plus-style = "#6e915f"
+    line-numbers-zero-style = "#a09cac"
+    line-numbers-left-format = "{nm:^4}│"
+    line-numbers-right-format = "{np:^4}│"
+    line-numbers-left-style = "#a09cac"
+    line-numbers-right-style = "#a09cac"
+    file-style = "#6693bf" bold
+    file-decoration-style = "#a09cac" ul
+    hunk-header-style = file line-number syntax
+    hunk-header-file-style = "#6693bf"
+    hunk-header-line-number-style = "#de9800"
+    hunk-header-decoration-style = "#a09cac" ul
+    commit-style = "#cc6d00" bold
+    commit-decoration-style = "#a09cac" ul
+    blame-palette = "#e5ddb0" "#f2ecbc" "#e7dba0"
+    blame-code-style = syntax
+    blame-separator-style = "#a09cac"
+    inline-hint-style = "#8a8980"
+    grep-file-style = "#6693bf"
+    grep-line-number-style = "#de9800"
+    grep-header-file-style = "#6693bf" bold
+    grep-header-decoration-style = "#a09cac" ul
+    grep-context-line-style = syntax
+    grep-match-line-style = syntax "#e7dba0"
+    grep-match-word-style = "#545464" "#b5cbd2" bold
+    merge-conflict-begin-symbol = ▼
+    merge-conflict-end-symbol = ▲
+    merge-conflict-ours-diff-header-style = "#de9800" bold
+    merge-conflict-ours-diff-header-decoration-style = "#a09cac" ul
+    merge-conflict-theirs-diff-header-style = "#de9800" bold
+    merge-conflict-theirs-diff-header-decoration-style = "#a09cac" ul
+    navigate-regex = "^(commit|added:|removed:|renamed:|Δ)"
+    inspect-raw-lines = false
+    keep-plus-minus-markers = false
