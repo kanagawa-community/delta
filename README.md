@@ -60,14 +60,18 @@
 Install [Kanagawa for bat](https://github.com/kanagawa-community/bat) first,
 because delta takes its syntax themes from bat.
 
-Then clone this repository and copy the `themes/*.gitconfig` files somewhere
-stable, for example `~/.config/delta/`:
+Then clone this repository and run the install script. It copies the
+`themes/*.gitconfig` files to `~/.config/delta/` and does not change your `~/.gitconfig`:
 
 ```sh
 git clone https://github.com/kanagawa-community/delta
-mkdir -p ~/.config/delta
-cp delta/themes/*.gitconfig ~/.config/delta/
+cd delta
+./install.sh
 ```
+
+`./install.sh` installs all three variants. Name the ones you want instead, for
+example `./install.sh dragon lotus`. Run it again after `git pull` to update.
+`./uninstall.sh` takes the same names and removes them.
 
 ## Usage
 
