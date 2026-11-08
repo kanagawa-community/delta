@@ -7,7 +7,8 @@ setup() {
   # delta ignores BAT_* variables but follows XDG, so a throwaway tree isolates bat.
   export XDG_CONFIG_HOME="$work/xdg" XDG_CACHE_HOME="$work/cache"
   mkdir -p "$XDG_CONFIG_HOME/bat/themes"
-  cp "$root"/themes/bat/*.tmTheme "$XDG_CONFIG_HOME/bat/themes/"
+  git clone -q --depth 1 https://github.com/kanagawa-community/bat "$work/bat-port"
+  cp "$work"/bat-port/themes/*.tmTheme "$XDG_CONFIG_HOME/bat/themes/"
   bat cache --build >/dev/null
 }
 

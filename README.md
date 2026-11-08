@@ -53,28 +53,21 @@
 ## Requirements
 
 - [delta](https://github.com/dandavison/delta) 0.18 or later (for `blame-palette` and `map-styles`)
-- [bat](https://github.com/sharkdp/bat), to load the syntax themes
+- [Kanagawa for bat](https://github.com/kanagawa-community/bat), which provides the syntax themes delta reads
 
 ## Installation
 
-Clone the repository and install the syntax themes into bat, which delta reads:
+Install [Kanagawa for bat](https://github.com/kanagawa-community/bat) first,
+because delta takes its syntax themes from bat.
+
+Then clone this repository and copy the `themes/*.gitconfig` files somewhere
+stable, for example `~/.config/delta/`:
 
 ```sh
 git clone https://github.com/kanagawa-community/delta
-mkdir -p "$(bat --config-dir)/themes"
-cp delta/themes/bat/*.tmTheme "$(bat --config-dir)/themes/"
-bat cache --build
-```
-
-Copy the `themes/*.gitconfig` files somewhere stable, for example
-`~/.config/delta/`:
-
-```sh
 mkdir -p ~/.config/delta
 cp delta/themes/*.gitconfig ~/.config/delta/
 ```
-
-The `.tmTheme` files are bundled here until the Kanagawa bat port exists.
 
 ## Usage
 
