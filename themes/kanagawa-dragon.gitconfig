@@ -6,7 +6,7 @@
 #       features = kanagawa-dragon
 #
 # Colors come from kanagawa-community/.github palette.json, mapped by role.
-# syntax-theme needs themes/bat/kanagawa-dragon.tmTheme installed in bat.
+# syntax-theme needs the Kanagawa bat themes (kanagawa-community/bat) installed.
 
 [delta "kanagawa-dragon"]
     dark = true
